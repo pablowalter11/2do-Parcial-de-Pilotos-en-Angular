@@ -1,0 +1,34 @@
+{
+  "pilotos": [
+    {
+      "nombre": "Max Verstappen",
+      "escuderia_debut": "Red Bull",
+      "escuderia_actual": "Red Bull Racing",
+      "anio_debut": 2014,
+      "grandes_premios": 62,
+      "podios": 111,
+      "activo": true,
+      "id": "f593"
+    },
+    {
+      "id": "5f52",
+      "nombre": "Franco Colapinto",
+      "escuderia_debut": "Williams",
+      "escuderia_actual": "Williams",
+      "anio_debut": 2024,
+      "grandes_premios": 0,
+      "podios": 0,
+      "activo": true
+    },
+    {
+      "id": "858e",
+      "nombre": "Lando Norris",
+      "escuderia_debut": "McLaren",
+      "escuderia_actual": "McLaren",
+      "anio_debut": 2019,
+      "grandes_premios": 3,
+      "podios": 25,
+      "activo": true
+    }
+  ]
+}

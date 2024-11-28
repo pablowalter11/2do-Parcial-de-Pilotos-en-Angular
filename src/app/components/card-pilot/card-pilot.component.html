@@ -1,0 +1,7 @@
+<section>
+    <h1>{{piloto.nombre}}</h1>
+    <h2>{{piloto.escuderia_actual}}</h2>
+    <button [routerLink]="['/detail/', piloto.id]">Ver Detalles</button>
+    <button [routerLink]="['/update/', piloto.id]">Modificar</button>
+    <button (click)="delete(piloto.id)">Borrar</button>
+</section>

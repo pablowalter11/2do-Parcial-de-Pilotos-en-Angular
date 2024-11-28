@@ -1,0 +1,83 @@
+<fieldset class="formulario">
+    <legend>Ingrese Los Datos Del Piloto Que Desee Agregar</legend>
+    <form [formGroup]="form" (ngSubmit)="addPiloto()">
+
+        <div *ngIf="form.controls['nombre'].getError('requiered') && form.controls['nombre'].touched">
+            <div class="error"><p>Campo Requerido</p></div>
+        </div>
+        <label for="">Nombre:</label>
+        <input 
+            type="text"
+            formControlName="nombre"
+        >
+
+        <div *ngIf="form.controls['escuderia_debut'].getError('requiered') && form.controls['escuderia_debut'].touched">
+            <div class="error">Campo Requerido</div>
+        </div>
+        <label for="">Escudería Debut:</label>
+        <input 
+            type="text"
+            formControlName="escuderia_debut"
+        >
+
+        <label for="">Escudería Actual:</label>
+        <select name="Escuderia" id="" formControlName="escuderia_actual">
+            <option value="" disabled selected>Elige una Opción:</option>
+            <option value="Ferrari">Ferrari</option>
+            <option value="McLaren">McLaren</option>
+            <option value="Mercedes Benz">Mercedes Benz</option>
+            <option value="Red Bull Racing">Red Bull Racing</option>
+            <option value="Aston Martin">Aston Martin</option>
+            <option value="Hass">Hass</option>
+            <option value="RB">RB</option>
+            <option value="Williams">Williams</option>
+            <option value="Alpine">Alpine</option>
+            <option value="Kick Sauber">Kick Sauber</option>
+            <option value="">Ya se Retiro</option>
+        </select>
+
+        <div *ngIf="form.controls['anio_debut'].getError('requiered') && form.controls['anio_debut'].touched">
+            <div class="error">Campo Requerido</div>
+            <div *ngIf="form.controls['anio_debut'].getError('min') && form.controls['anio_debut'].getError('max')">
+                <div class="error">El año debut debe ser desde 1950 hasta la actualidad</div>
+            </div>
+        </div>
+        <label for="">Año Debut:</label>
+        <input 
+            type="number"
+            formControlName="anio_debut"
+        >
+
+        <div *ngIf="form.controls['grandes_premios'].getError('requiered') && form.controls['grandes_premios'].touched">
+            <div class="error">Campo Requerido</div>
+            <div *ngIf="form.controls['grandes_premios'].getError('min')">
+                <div class="error">El número ingresado no puede ser menor a 0</div>
+            </div>
+        </div>
+        <label for="">Grandes Premios:</label>
+        <input 
+            type="number"
+            formControlName="grandes_premios"
+        >
+
+        <div *ngIf="form.controls['podios'].getError('requiered') && form.controls['podios'].touched">
+            <div class="error">Campo Requerido</div>
+            <div *ngIf="form.controls['podios'].getError('min')">
+                <div class="error">El número ingresado no puede ser menor a 0</div>
+            </div>
+        </div>
+        <label for="">Podios:</label>
+        <input 
+            type="number"
+            formControlName="podios"
+        >
+
+        <label for="">Activo: </label>
+        <input 
+            type="checkbox"
+            formControlName="activo"
+        >
+
+        <button>AGREGAR</button>
+    </form>
+</fieldset>

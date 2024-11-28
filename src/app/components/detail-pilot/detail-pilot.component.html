@@ -1,0 +1,21 @@
+<section>
+    @if (piloto.activo) {
+        <p>{{piloto.nombre}} actualmente corre en {{piloto.escuderia_actual}}</p> <br>
+        <p>Debutó en el {{piloto.anio_debut}} en {{piloto.escuderia_debut}}</p> <br>
+        <p>LLeva {{piloto.grandes_premios}} grandes premios</p> <br>
+        @if (piloto.podios === 0) {
+            <p>Actualmente no se ha subido a ningún podio</p> <br>
+        } @else {
+            <p>Actualmente lleva {{piloto.podios}} podios sumados</p> <br>
+        }
+    } @else {
+        <p>{{piloto.nombre}} fue un corredor de F1, su última escuderia fue {{piloto.escuderia_actual}}</p> <br>
+        <p>Debutó en el {{piloto.anio_debut}} en {{piloto.escuderia_debut}}</p> <br>
+        <p>Ganó {{piloto.grandes_premios}} grandes premios</p> <br>
+        @if (piloto.podios === 0) {
+            <p>No pudo subir a ningún podio</p> <br>
+        } @else {
+            <p>Se llevó {{piloto.podios}} podios en su carrera</p> <br>
+        }
+    }
+</section>

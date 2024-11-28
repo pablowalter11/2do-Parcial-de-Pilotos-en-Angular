@@ -1,0 +1,23 @@
+.container{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    height: 100vh;
+    grid-template-areas: "sidebar content";
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 175px;
+    height: 100%;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.content{
+    grid-area: content;
+    padding: 20px;
+    overflow: auto;
+}
